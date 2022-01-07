@@ -12,10 +12,13 @@ namespace Design_Patterns_Assignment
     {
         internal static void Run()
         {
-          
+            MailBox Email = new MailBox();
             MailBoxWatcher emailObserver = new MailBoxWatcher();
+
+            Email.RegisterObserver(emailObserver);
+            Email.CreateTimer();
             Console.WriteLine("Observer");
-            emailObserver.Update();
+            
 
         }
 
